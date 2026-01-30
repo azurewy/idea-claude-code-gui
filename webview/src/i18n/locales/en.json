@@ -671,6 +671,15 @@
         "idExists": "Server ID \"{{id}}\" already exists",
         "unrecognizedFormat": "Unrecognized configuration format",
         "jsonParseError": "JSON parse error: {{message}}"
+      },
+      "warnings": {
+        "placeholderDetected": "Unreplaced placeholders detected",
+        "placeholderDescription": "The configuration contains the following placeholders, the server may not connect properly:",
+        "morePlaceholders": "... and {{count}} more placeholder(s)",
+        "placeholderConfirmTitle": "Confirm Save?",
+        "placeholderConfirmMessage": "The configuration contains the following unreplaced placeholders:",
+        "placeholderConfirmHint": "It is recommended to replace placeholders with actual values before saving. If you continue, the server may not be able to connect properly.",
+        "saveAnyway": "Save Anyway"
       }
     },
     "tools": "Tools",

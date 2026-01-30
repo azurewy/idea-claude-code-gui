@@ -671,6 +671,15 @@
         "idExists": "服务器 ID \"{{id}}\" 已存在",
         "unrecognizedFormat": "无法识别的配置格式",
         "jsonParseError": "JSON 解析错误: {{message}}"
+      },
+      "warnings": {
+        "placeholderDetected": "检测到未替换的占位符",
+        "placeholderDescription": "配置中包含以下占位符，服务器可能无法正常连接：",
+        "morePlaceholders": "还有 {{count}} 个占位符...",
+        "placeholderConfirmTitle": "确认保存？",
+        "placeholderConfirmMessage": "配置中包含以下未替换的占位符：",
+        "placeholderConfirmHint": "建议将占位符替换为实际值后再保存。如果继续保存，服务器可能无法正常连接。",
+        "saveAnyway": "仍然保存"
       }
     },
     "tools": "工具",

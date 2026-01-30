@@ -98,7 +98,7 @@ export function ServerCard({
           </button>
           {/* 单个服务器刷新按钮 */}
           <button
-            className={`single-refresh-btn ${refreshState?.isRefreshing ? 'refreshing' : ''}`}
+            className="icon-btn"
             onClick={(e) => {
               e.stopPropagation();
               onRefresh();

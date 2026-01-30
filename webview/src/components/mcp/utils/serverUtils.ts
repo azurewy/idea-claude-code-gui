@@ -55,6 +55,13 @@ export function getServerStatusInfo(
     }
   }
 
+  // 诊断日志：未找到匹配的状态
+  console.warn('[MCP Status] No match found for server:', {
+    serverId: server.id,
+    serverName: server.name,
+    availableStatusKeys: Array.from(serverStatus.keys())
+  });
+
   return undefined;
 }
 

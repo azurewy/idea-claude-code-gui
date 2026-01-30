@@ -104,7 +104,8 @@ export function createProcessHandlers(context) {
 export function sendInitializeRequest(child, serverName) {
   try {
     child.stdin.write(createInitializeRequest());
-    child.stdin.end();
+    // 不要立即关闭 stdin，让服务器自然响应
+    // 某些 MCP 服务器可能需要保持 stdin 打开
   } catch (e) {
     log('debug', `Failed to write to stdin for ${serverName}:`, e.message);
   }

@@ -231,6 +231,10 @@ export function useServerData({
         const serverList: McpServer[] = JSON.parse(jsonStr);
         setServers(serverList);
         setLoading(false);
+
+        // 诊断日志：打印服务器列表详情
+        console.log('[MCP Servers] Server list loaded:', serverList.map(s => ({ id: s.id, name: s.name })));
+
         onLog(t('mcp.logs.loadedServersSuccess', { count: serverList.length }), 'success');
       } catch (error) {
         console.error('[McpSettings] Failed to parse servers:', error);
@@ -248,6 +252,10 @@ export function useServerData({
         });
         setServerStatus(statusMap);
         setStatusLoading(false);
+
+        // 诊断日志：打印状态列表详情
+        console.log('[MCP Status] Server status map keys:', Array.from(statusMap.keys()));
+        console.log('[MCP Status] Server status details:', Array.from(statusMap.entries()).map(([k, v]) => ({ name: k, status: v.status })));
 
         const statusCount = {
           connected: statusList.filter(s => s.status === 'connected').length,

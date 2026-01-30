@@ -1704,12 +1704,11 @@
 
 .tool-icon {
     flex-shrink: 0;
-    width: auto;
-    min-width: 200px;
-    height: 22px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 24px;
+    height: 24px;
     border-radius: 4px;
     background: var(--bg-tertiary);
     color: var(--accent-primary);
@@ -2026,11 +2025,10 @@
 }
 
 .mcp-tool-tooltip .tooltip-icon {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    min-width: 200px;
+    width: 24px;
     height: 24px;
     border-radius: 4px;
     background: var(--bg-tertiary);
@@ -2110,4 +2108,110 @@
     font-size: 11px;
     color: var(--text-tertiary);
     font-style: italic;
+}
+
+/* 占位符警告样式 */
+.mcp-server-dialog .placeholder-warning {
+    padding: 12px 16px;
+    margin-top: 12px;
+    border-radius: 6px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.mcp-server-dialog .placeholder-warning .codicon-warning {
+    color: #F59E0B;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.mcp-server-dialog .placeholder-warning .warning-content {
+    flex: 1;
+}
+
+.mcp-server-dialog .placeholder-warning .warning-title {
+    font-weight: 600;
+    color: #F59E0B;
+    margin-bottom: 6px;
+}
+
+.mcp-server-dialog .placeholder-warning .warning-details {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.mcp-server-dialog .placeholder-warning .placeholder-list {
+    margin: 8px 0 0 16px;
+    padding: 0;
+}
+
+.mcp-server-dialog .placeholder-warning .placeholder-list li {
+    margin: 4px 0;
+}
+
+.mcp-server-dialog .placeholder-warning .placeholder-list code {
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #F59E0B;
+    font-family: var(--idea-editor-font-family, monospace);
+    font-size: 12px;
+}
+
+.mcp-server-dialog .placeholder-warning .more-hint {
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+/* 占位符确认对话框 */
+.confirm-dialog {
+    max-width: 500px;
+    margin: auto;
+}
+
+.confirm-dialog .placeholder-details-list {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+}
+
+.confirm-dialog .placeholder-detail-item {
+    padding: 6px 0;
+    font-size: 12px;
+    border-bottom: 1px solid var(--border-secondary);
+}
+
+.confirm-dialog .placeholder-detail-item:last-child {
+    border-bottom: none;
+}
+
+.confirm-dialog .placeholder-detail-item code {
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+    font-family: var(--idea-editor-font-family, monospace);
+}
+
+.confirm-dialog .placeholder-detail-item.more-hint {
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.confirm-dialog .confirm-hint {
+    padding: 12px;
+    border-radius: 6px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
